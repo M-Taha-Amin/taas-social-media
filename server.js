@@ -45,10 +45,9 @@ app.use((error, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-const StartApp = async () => {
-  await connectDB();
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on Port: ${PORT}`);
-  });
-};
-StartApp();
+await connectDB();
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on Port: ${PORT}`);
+});
+
+export default app;
