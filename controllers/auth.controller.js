@@ -70,6 +70,7 @@ export const signup = asyncHandler(async (req, res) => {
 });
 
 export const login = asyncHandler(async (req, res) => {
+  console.log('Login Request Recieved');
   const { username, password } = req.body;
 
   if (!username) {
@@ -101,7 +102,7 @@ export const login = asyncHandler(async (req, res) => {
     coverImage: user.coverImage,
     profileImage: user.profileImage,
     savedPosts: user.savedPosts,
-    likedPosts: user.likedPosts
+    likedPosts: user.likedPosts,
   });
 });
 
