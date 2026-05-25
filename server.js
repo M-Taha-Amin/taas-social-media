@@ -36,6 +36,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.get('*', (req, res) => {
+  console.log('Request Recieved');
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
   return;
 });
