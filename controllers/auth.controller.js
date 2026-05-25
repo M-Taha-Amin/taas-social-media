@@ -70,7 +70,6 @@ export const signup = asyncHandler(async (req, res) => {
 });
 
 export const login = asyncHandler(async (req, res) => {
-  console.log('Login Request Recieved');
   const { username, password } = req.body;
 
   if (!username) {
